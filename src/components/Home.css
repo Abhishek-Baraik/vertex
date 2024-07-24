@@ -27,7 +27,3 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
-.container{
-    height: calc(100vh - 100px);
-}

@@ -1,46 +1,48 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CurtainButtonGray from './CurtainButtonGray'
+import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className='bg-primary paddings flex flex-col gap-4'>
-      <div className='text-white'>
+    <footer>
+    <section className='bg-primary py-10 sm:px-[9rem] px-[1.5rem] flex flex-col sm:flex-row gap-10'>
+      <div className='text-white sm:w-1/3'>
       <a href="https://www.vertexexecutiverecruiting.com/">
           <img src="logo.png" className="w-[150px] sm:w-[300px]" alt="" />
         </a>
         <p className='p mt-4'>At Vertex Executive Recruiting, we excel in executive search and recruitment. Our integrity, innovation, and global reach make us the trusted partner for organizations seeking top talent and executives looking for new opportunities.</p>
       </div>
-      <div>
+      <div className='sm:w-1/3'>
         <h4 className='h3'>Quick Links</h4>
         <div className="divider w-1/5 border-b-2 border-b-white"></div>
-        <ul className={`sm:flex mt-4 gap-6 font-normal items-center text-white`}>
+        <ul className={`sm:grid sm:grid-cols-2 mt-4 gap-6 font-normal items-center text-white`}>
         <Link to="/" >
-          <li className="navlinks cursor-pointer">Home</li>
+          <li className="footlinks cursor-pointer">Home</li>
         </Link>
         <Link to="/team" >
-          <li className="navlinks cursor-pointer">Team</li>
+          <li className="footlinks cursor-pointer">Team</li>
         </Link>
         <Link to="/about" >
-          <li className="navlinks cursor-pointer">About</li>
+          <li className="footlinks cursor-pointer">About</li>
         </Link>
         <Link to="/employers" >
-          <li className="navlinks cursor-pointer">Employers</li>
+          <li className="footlinks cursor-pointer">Employers</li>
         </Link>
         <Link to="/candidates" >
-          <li className="navlinks cursor-pointer">Candidates</li>
+          <li className="footlinks cursor-pointer">Candidates</li>
         </Link>
         <Link to="/services" >
-          <li className="navlinks cursor-pointer">Services</li>
+          <li className="footlinks cursor-pointer">Services</li>
         </Link>
         <Link to="/faqs" >
-          <li className="navlinks cursor-pointer">FAQS</li>
+          <li className="footlinks cursor-pointer">FAQS</li>
         </Link>
         <Link to="/blog" >
-          <li className="navlinks cursor-pointer">Blog</li>
+          <li className="footlinks cursor-pointer">Blog</li>
         </Link>
         <Link to="/contact">
-          <li className="navlinks cursor-pointer">Contact</li>
+          <li className="footlinks cursor-pointer">Contact</li>
         </Link>
       </ul>
       </div>
@@ -48,9 +50,15 @@ const Footer = () => {
         <h4 className='h3'>Newsletter</h4>
         <div className="divider w-1/5 border-b-2 border-b-white"></div>
         <p className='p mt-4 mb-4'>Enter your email address here to subscribe to our newsletter. We promise not to spam!</p>
-        <input type="email" placeholder='email'/>
+        <div className='flex gap-3'>
+        <input type="email" className='p-2 rounded-md' placeholder='email'/>
         <CurtainButtonGray text='Subscribe'/>
+        </div>
       </div>
+    </section>
+    <div className='bg-tertiary text-center p-10 flex items-center justify-center font-medium text-white'>
+    © Copyright 2023 All Rights Reserved  
+    </div>
     </footer>
   )
 }

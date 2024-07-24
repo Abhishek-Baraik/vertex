@@ -1,0 +1,18 @@
+.footlinks {
+    position: relative;
+    padding: 5px;
+  }
+  
+  .footlinks::after {
+    content: "";
+    position: absolute;
+    background-color:white;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s;
+  }
+  .footlinks:hover::after {
+    width: 100%;
+  }

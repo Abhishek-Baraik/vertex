@@ -11,14 +11,5 @@ const CurtainButton = ({ text, backgroundColor, textColor }) => {
   );
 };
 
-CurtainButton.propTypes = {
-  text: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-};
-
-CurtainButton.defaultProps = {
-  textColor: "white",
-};
 
 export default CurtainButton;
