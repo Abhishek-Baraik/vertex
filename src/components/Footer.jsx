@@ -14,7 +14,7 @@ const Footer = () => {
         <p className='p mt-4'>At Vertex Executive Recruiting, we excel in executive search and recruitment. Our integrity, innovation, and global reach make us the trusted partner for organizations seeking top talent and executives looking for new opportunities.</p>
       </div>
       <div className='sm:w-1/3'>
-        <h4 className='h3'>Quick Links</h4>
+        <h4 className='h3 text-white'>Quick Links</h4>
         <div className="divider w-1/5 border-b-2 border-b-white"></div>
         <ul className={`sm:grid sm:grid-cols-2 mt-4 gap-6 font-normal items-center text-white`}>
         <Link to="/" >

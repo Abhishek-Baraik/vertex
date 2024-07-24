@@ -30,7 +30,7 @@ const Navbar = () => {
   }, []);
 
   const isActive = (path) => {
-    return location.pathname === path ? "active" : "";
+    return location.pathname === path ? "activebar" : "";
   };
 
   return (
