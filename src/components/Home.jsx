@@ -58,7 +58,7 @@ const Home = () => {
         <div className="flex flex-col gap-10 items-center justify-center">
           <h2 className="h2 text-primary hidden sm:block font-bold">WELCOME</h2>
           <p className="p opacity-80 text-center">
-            Vertex Executive Recruiting excels in connecting outstanding talent
+            <span className="text-lg text-primary font-semibold italic">Vertex Executive Recruiting</span> excels in connecting outstanding talent
             with premier organizations through our dedicated headhunting and
             retained executive search services. With a proven history of
             excellence, we have established ourselves as a trusted partner for
@@ -71,10 +71,10 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="sm:flex-row flex flex-col gap-6 sm:gap-0 items-start paddings justify-between mb-10 mt-5">
+      <div className="sm:flex-row flex flex-col gap-6 sm:gap-0 items-center paddings sm:justify-between mb-10 mt-5">
         <div className="flex gap-3" ref={ref}>
           <div className="bg-primary p-4 rounded-full flex items-center justify-center">
-            <FaRocket className="text-3xl" />
+            <FaRocket className="text-3xl text-white" />
           </div>
           <div>
             {inView && (
@@ -85,15 +85,15 @@ const Home = () => {
                   duration={5}
                   className="countup md:text-4xl"
                 />
-                <span className="text-primary text-3xl"> +</span>
+                <span className="text-primary sm:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Companies we helped</p>
           </div>
         </div>
-        <div className="flex gap-3" ref={ref}>
+        <div className="flex gap-3 mr-4" ref={ref}>
           <div className="bg-primary p-4 rounded-full flex items-center justify-center">
-            <BsBriefcaseFill className="text-3xl" />
+            <BsBriefcaseFill className="text-3xl text-white" />
           </div>
           <div>
             {inView && (
@@ -104,16 +104,16 @@ const Home = () => {
                   duration={5}
                   className="countup md:text-4xl"
                 />
-                <span className="text-primary text-3xl"> +</span>
+                <span className="text-primary sm:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Corporate Programs</p>
           </div>
         </div>
-        <div className="flex gap-3" ref={ref}>
+        <div className="flex gap-3 mr-10" ref={ref}>
           <div className="bg-primary p-4 rounded-full flex items-center justify-center">
             <FaGraduationCap
-            className="text-3xl" />
+            className="text-3xl text-white" />
           </div>
           <div>
             {inView && (
@@ -124,15 +124,15 @@ const Home = () => {
                   duration={5}
                   className="countup md:text-4xl"
                 />
-                <span className="text-primary text-3xl"> +</span>
+                <span className="text-primary sm:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Training Courses</p>
           </div>
         </div>
-        <div className="flex gap-3" ref={ref}>
+        <div className="flex gap-3 mr-9" ref={ref}>
           <div className="bg-primary p-4 rounded-full flex items-center justify-center">
-            <FaUser className="text-3xl" />
+            <FaUser className="text-3xl text-white" />
           </div>
           <div>
             {inView && (
@@ -143,7 +143,7 @@ const Home = () => {
                   duration={5}
                   className="countup md:text-4xl"
                 />
-                <span className="text-primary text-3xl"> +</span>
+                <span className="text-primary sm:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Strategic Partners</p>
