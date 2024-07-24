@@ -27,3 +27,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+.executive:hover{
+  .headerr{
+    color: black;
+    opacity:70%;
+  }
+}
