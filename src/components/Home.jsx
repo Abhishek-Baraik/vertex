@@ -58,7 +58,7 @@ const Home = () => {
           nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev",
         }}
-        pagination={{ clickable: true }}
+        // pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }} // Add autoplay s90tings
       >
         <SwiperSlide key={1} className="">
