@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Button.css";
 
 
-const CurtainButton = ({ text, backgroundColor, textColor }) => {
+const Button = ({ text, backgroundColor, textColor }) => {
   return (
     <a href="#contact-form" className="curtain-button rounded-md " style={{ backgroundColor, color: textColor }}>
       <span className="text-nowrap">{text}</span>
@@ -12,4 +12,4 @@ const CurtainButton = ({ text, backgroundColor, textColor }) => {
 };
 
 
-export default CurtainButton;
+export default Button;
