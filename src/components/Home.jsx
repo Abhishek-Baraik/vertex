@@ -419,11 +419,11 @@ const Home = () => {
           className="sm:w-1/2 mx-auto flex flex-col gap-5 py-6 sm:px-12"
         >
           <div className="flex flex-col sm:flex-row justify-center gap-5">
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col">
               <input
                 type="text"
                 name="Full Name"
-                className="w-full p-3 border-[1px] border-zinc-200 rounded-md"
+                className=" p-3 border-[1px] border-zinc-200 rounded-md"
                 placeholder="Full Name"
               />
             </div>
@@ -501,7 +501,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="px-[9rem] py-10 bg-[#EDF2FF] flex justify-between">
+      <section className="sm:px-[9rem] py-10 bg-[#EDF2FF] flex flex-col sm:flex-row gap-3 justify-between">
         <div className="text-center">
           <h4 className="h4 opacity-75 font-semibold">FOR JOB SEEKERS</h4>
           <p className="p text-primary">jobs@vertexexecutiverecruiting.com</p>
