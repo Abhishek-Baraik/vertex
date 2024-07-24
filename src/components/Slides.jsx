@@ -11,6 +11,7 @@ import "swiper/swiper-bundle.css";
 import "swiper/css";
 import Button from "./Button";
 import CurtainButtonGray from "./CurtainButtonGray";
+import { Link } from "react-router-dom";
 const Slides = () => {
   return (
     <Swiper
@@ -42,8 +43,8 @@ const Slides = () => {
               CONNECTING ELITE TALENT WITH GLOBAL ENTERPRISES
             </p>
             <div className="flex flex-column justify-center mb-2 gap-4 text-center">
-              <Button text="Get Started" textColor="white" />
-              <CurtainButtonGray text={"About Us"} />
+            <Link to={'/about'} > <Button text="Get Started" textColor="white" /></Link>
+            <Link to={'/contact-form'}> <CurtainButtonGray text={"Contact"} /> </Link>
             </div>
           </div>
         </div>
@@ -62,8 +63,8 @@ const Slides = () => {
             </h1>
             <p className="h4 sm:mb-5 ">FIND YOUR NEXT LEADER</p>
             <div className="flex flex-column justify-center gap-4 text-center">
-              <Button text="Get Started" textColor="white" />
-              <CurtainButtonGray text={"Learn More"} />
+            <Link to={'/about'} > <Button text="Get Started" textColor="white" /></Link>
+            <Link to={'/contact-form'}> <CurtainButtonGray text={"Contact"} /> </Link>
             </div>
           </div>
         </div>
@@ -82,8 +83,8 @@ const Slides = () => {
             </h1>
             <p className="h4 sm:mb-5 ">UNLOCK NEW CAREER HORIZONS</p>
             <div className="flex flex-column justify-center gap-4 text-center ">
-              <Button text="Get Started" textColor="white" />
-              <CurtainButtonGray text={"Contact"} />
+             <Link to={'/about'} > <Button text="Get Started" textColor="white" /></Link>
+             <Link to={'/contact-form'}> <CurtainButtonGray text={"Contact"} /> </Link>
             </div>
           </div>
         </div>

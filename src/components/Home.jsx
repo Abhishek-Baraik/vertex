@@ -12,11 +12,12 @@ import { FaCogs } from "react-icons/fa";
 import { FaGlobeAsia } from "react-icons/fa";
 import { FaFile } from "react-icons/fa";
 import { RiDoubleQuotesL } from "react-icons/ri";
-
+import { FaGreaterThan } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import CountUp from "react-countup";
 import { FaRocket } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
-import FaqSection from './FaqSection'
+import FaqSection from "./FaqSection";
 
 import {
   Navigation,
@@ -28,6 +29,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
+import Button from "./Button";
 
 const Home = () => {
   const box = [
@@ -112,9 +114,7 @@ const Home = () => {
       answer:
         "Confidentiality is paramount to us. We understand the sensitivity of senior-level job searches and the potential impact on your current position. We uphold strict confidentiality throughout the entire process, ensuring that your personal information and job search activities remain private and undisclosed to your current employer or any other party without your explicit consent.",
     },
-    
   ];
-
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -133,14 +133,16 @@ const Home = () => {
           >
             <h4 className="h3 text-white font-semibold">{det.heading}</h4>
             <p className="p text-white">{det.para}</p>
-            <button className="text-start text-white font-semibold hover:text-secondary">
-              learn more
-            </button>
+            <Link to={"/services"}>
+              <button className="text-start text-white flex items-center gap-2 font-semibold hover:text-secondary">
+                learn more <FaGreaterThan />
+              </button>
+            </Link>
           </div>
         ))}
       </section>
 
-        {/* vertex executive */}
+      {/* vertex executive */}
       <section className="paddings sm:flex mt-5">
         <div className="flex flex-col gap-10 items-center justify-center">
           <p className="h5 opacity-80 text-center">
@@ -159,7 +161,7 @@ const Home = () => {
         </div>
       </section>
 
-{/* vcountups  */}
+      {/* vcountups  */}
       <section className="sm:flex-row flex flex-col gap-6 sm:gap-0 items-center paddings sm:justify-between mb-10 mt-5">
         <div className="flex gap-3" ref={ref}>
           <div className="bg-primary p-4 rounded-full flex items-center justify-center">
@@ -238,7 +240,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-{/* why choose us */}
+      {/* why choose us */}
       <section className="sm:mt-20 mb-10 paddings">
         <h1 className="h2 text-secondary font-semibold text-center">
           WHY CHOOSE US FOR EXECUTIVE SEARCH
@@ -304,14 +306,13 @@ const Home = () => {
         </div>
       </section>
 
-      
-{/* client sucess stories */}
+      {/* client sucess stories */}
       <section className="paddings mt-20 bg-[#EDF2FF]">
         <div className="">
           <h2 className="h2 paddings text-secondary font-semibold text-center">
             Client Success Stories
           </h2>
-          <p className="p paddings text-center" >
+          <p className="p paddings text-center">
             Discover how Vertex Executive Recruiting has successfully partnered
             with organizations like yours to secure transformative executives.
             Our track record of placing visionary leaders in key roles speaks
@@ -330,7 +331,10 @@ const Home = () => {
           </p>
         </div>
         <div>
-          <h3 className="h5 paddings font-semibold text-center">Experience the power of strategic executive search with Vertex Executive Recruiting. Your vision, our expertise!</h3>
+          <h3 className="h5 paddings font-semibold text-center">
+            Experience the power of strategic executive search with Vertex
+            Executive Recruiting. Your vision, our expertise!
+          </h3>
         </div>
       </section>
 
@@ -380,9 +384,9 @@ const Home = () => {
 
       {/* blog posts section */}
       <section className="paddings">
-        <h1 className="h2 text-secondary font-semibold text-center">
+        <h2 className="h2 text-secondary font-semibold text-center">
           BLOG POSTS
-        </h1>
+        </h2>
         <div className="border-b-2 border-primary w-1/4 m-auto"></div>
         <div className="sm:flex-row flex flex-col gap-5  sm:gap-10 mt-10">
           {blogs.map((blog) => (
@@ -402,7 +406,115 @@ const Home = () => {
       </section>
 
       {/* faqs section */}
-      <FaqSection faqs={faqs}/>
+      <FaqSection faqs={faqs} />
+
+      {/* form section */}
+      <section className="paddings mb-10">
+        <h1 className="h2 text-secondary font-semibold text-center">
+          APPLICANT FORM
+        </h1>
+
+        <form
+          action=""
+          className="sm:w-1/2 mx-auto flex flex-col gap-5 py-6 sm:px-12"
+        >
+          <div className="flex flex-col sm:flex-row justify-center gap-5">
+            <div className="flex flex-col w-full">
+              <input
+                type="text"
+                name="Full Name"
+                className="w-full p-3 border-[1px] border-zinc-200 rounded-md"
+                placeholder="Full Name"
+              />
+            </div>
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="Email"
+                className="p-3 border-[1px] border-zinc-200 rounded-md"
+                placeholder="Email"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-5">
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="Phone"
+                className=" p-3 border-[1px] border-zinc-200 rounded-md"
+                placeholder="Phone"
+              />
+            </div>
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="Job Title"
+                className="p-3 border-[1px] border-zinc-200 rounded-md"
+                placeholder="Desired Job Title"
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-5">
+            <div className="flex flex-col">
+              <input
+                type="text"
+                name="Desired Location"
+                className=" p-3 border-[1px] border-zinc-200 rounded-md"
+                placeholder="Desired Location"
+              />
+            </div>
+            <div className="flex flex-col">
+              <select
+                name="Expected Salary"
+                className="p-3 border-[1px] text-black opacity-80 border-zinc-200 rounded-md"
+                id=""
+              >
+                <option value="$100k - $150k">Select Expected Salary</option>
+                <option value="$100k - $150k">$100k - $150k</option>
+                <option value="$150k - $200k">$150k - $200k</option>
+                <option value="$200k - $250k">$200k - $250k</option>
+                <option value="$300k - $400k">$300k - $400k</option>
+                <option value="$500k">$500k</option>
+              </select>
+            </div>
+          </div>
+          <div className="flex gap-4 p-6">
+            <input
+              type="checkbox"
+              name="confirmation"
+              className="scale-[1.2]"
+              id=""
+              required
+            />
+            <p>
+              I confirm that I want to receive emails, calls and text messages
+              from this company using any contact information I provide.
+            </p>
+          </div>
+        </form>
+        <div className="flex justify-center">
+          <button type="submit" className="curtain-button rounded-md">
+            <span className="p-2">Submit</span>
+          </button>
+        </div>
+      </section>
+
+      <section className="px-[9rem] py-10 bg-[#EDF2FF] flex justify-between">
+        <div className="text-center">
+          <h4 className="h4 opacity-75 font-semibold">FOR JOB SEEKERS</h4>
+          <p className="p text-primary">jobs@vertexexecutiverecruiting.com</p>
+        </div>
+        <div className="text-center">
+          <h4 className="h4 opacity-75 font-semibold">FOR EMPLOYERS</h4>
+          <p className="p text-primary">staffing@vertexexecutiverecruiting.com</p>
+        </div>
+        <div className="text-center">
+          <h4 className="h4 font-semibold opacity-75">OPEN HOURS</h4>
+          <p className="p text-primary">Daily 9:00-20:00</p>
+        </div>
+      </section>
     </main>
   );
 };
