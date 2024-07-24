@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.paddings{
+    padding: 0 9rem;
+}
+
+.h1{
+    font-size: 4rem;
+}
+
+.h2{
+    font-size: 3rem;
+}
+.h3{
+    font-size: 2rem;
+}
+
+.h4{
+    font-size: 1.6rem;
+}
+
+.p{
+    font-size: 1rem;
+}
+
+li{
+  font-size: 0.75rem;
+  font: 500;
+}
+
+@media (max-width:1024px) {
+    .h1{
+      font-size: 3rem;
+    }
+    .h2{
+      font-size: 2rem;
+    }
+    .h3{
+        font-size: 1rem;
+    }
+    .p{
+        font-size: 0.75rem;
+    }
+    .paddings{
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  @media (max-width:640px) {
+    .h1{
+      font-size: 2rem;
+    }
+
+    .h2{
+      font-size: 1rem;
+    }
+    .h3{
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: white;
+    }
+    .h4{
+      font-size: 0.75rem;
+    }
+    .p{
+      font-size: 0.85rem; 
+    }
+
+    .paddings{
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    li{
+      font-size: 0.85rem;
+      font: 500;
+    }
+  }

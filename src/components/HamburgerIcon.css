@@ -1,0 +1,45 @@
+/* HamburgerIcon.css */
+
+.hamburger-icon {
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .hamburger-icon .line {
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    transition: all 0.3s;
+  }
+  
+  .hamburger-icon .line1 {
+    top: 0;
+  }
+  
+  .hamburger-icon .line2 {
+    top: 10px;
+  }
+  
+  .hamburger-icon .line3 {
+    top: 20px;
+  }
+  
+  .hamburger-icon.open .line1 {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+  
+  .hamburger-icon.open .line2 {
+    opacity: 0;
+  }
+  
+  .hamburger-icon.open .line3 {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+  

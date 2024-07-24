@@ -1,0 +1,38 @@
+.curtain-button-gray {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  background-color: #2C2D3F;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.curtain-text {
+  position: relative;
+  z-index: 2;
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 100%;
+  background-color: #1A76D1;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.curtain-button-gray:hover .curtain {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.curtain-button-gray:hover {
+  color: white;
+}

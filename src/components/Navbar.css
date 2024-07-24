@@ -1,0 +1,40 @@
+/* styles.css or your CSS file */
+.active {
+  border-bottom: 2px solid #1A76D1;
+}
+
+.navlinks {
+  position: relative;
+  padding: 5px;
+}
+
+.navlinks::after {
+  content: "";
+  position: absolute;
+  background-color: #1A76D1;
+  height: 2px;
+  width: 0%;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s;
+}
+.navlinks:hover::after {
+  width: 100%;
+}
+
+.sticky{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transform: translateY(-80px);
+  animation: stickyHeader 0.3s ease forwards;
+}
+
+@keyframes stickyHeader {
+0%{
+  transform: translateY(-80px);
+}
+100%{
+  transform: translateY(0);
+}
+}

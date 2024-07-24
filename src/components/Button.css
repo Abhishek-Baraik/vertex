@@ -1,0 +1,58 @@
+/* styles.css or your CSS file */
+
+.curtain-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color:#1A76D1;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.5s;
+  }
+  @media (max-width:640px) {
+    .curtain-button{
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+  
+  .curtain-button::before,
+  .curtain-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(44, 42, 42);
+    z-index: 0;
+    transition: width 0.5s;
+  }
+  
+  .curtain-button::before {
+    left: 50%;
+  }
+  
+  .curtain-button::after {
+    right: 50%;
+  }
+  
+  .curtain-button:hover::before,
+  .curtain-button:hover::after {
+    width: 50%;
+  }
+  
+  .curtain-button span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+  }
+  
+  .curtain-button:hover span {
+    color:white;
+  }
+  
