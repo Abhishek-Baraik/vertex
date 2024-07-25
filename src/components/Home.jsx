@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Slides from "./Slides";
-import CurtainButtonGray from "./CurtainButtonGray";
 import "./Home.css";
 import { FaBlackTie, FaUser } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
@@ -29,7 +28,6 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
-import Button from "./Button";
 
 const Home = () => {
   const box = [
@@ -425,6 +423,7 @@ const Home = () => {
                 name="Full Name"
                 className=" p-3 border-[1px] border-zinc-200 rounded-md"
                 placeholder="Full Name"
+                required
               />
             </div>
             <div className="flex flex-col">
@@ -471,7 +470,7 @@ const Home = () => {
                 className="p-3 border-[1px] text-black opacity-80 border-zinc-200 rounded-md"
                 id=""
               >
-                <option value="$100k - $150k">Select Expected Salary</option>
+                <option value="select">Select Expected Salary</option>
                 <option value="$100k - $150k">$100k - $150k</option>
                 <option value="$150k - $200k">$150k - $200k</option>
                 <option value="$200k - $250k">$200k - $250k</option>
