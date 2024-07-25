@@ -4,7 +4,7 @@ import { RxCross2 } from "react-icons/rx";
 import "./FaqSection.css";
 
 
-const FaqSection = ({faqs}) => {
+const FaqSection = ({faqs,heading}) => {
  
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -15,7 +15,7 @@ const FaqSection = ({faqs}) => {
   return (
     <section className="lg:px-[15rem] accordion flex flex-col  gap-4 sm:gap-6 mb-10 mt-10 paddings">
       <div>
-        <h2 className="text-[26px] sm:text-[48px] opacity-80 font-bold text-center">FREQUENTLY ASKED QUESTIONS</h2>
+        <h2 className="text-[26px] sm:text-[48px] opacity-80 font-bold text-center">{heading}</h2>
       </div>
       {faqs.map((faq, index) => (
         <div

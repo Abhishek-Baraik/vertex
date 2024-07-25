@@ -74,7 +74,9 @@ const Navbar = () => {
         </Link>
       </ul>
       <div className="hidden sm:flex items-center ml-4">
+        <Link to={"/contact"}>
         <Button text="Get Started" backgroundColor="#1A76D1" textColor="white" />
+        </Link>
       </div>
       <div className="flex items-center sm:hidden">
         <HamburgerIcon onClick={toggleMenu} />

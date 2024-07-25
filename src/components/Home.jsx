@@ -404,7 +404,7 @@ const Home = () => {
       </section>
 
       {/* faqs section */}
-      <FaqSection faqs={faqs} />
+      <FaqSection faqs={faqs} heading={"Why Choose Us For Candidates"} />
 
       {/* form section */}
       <section className="paddings mb-10">
