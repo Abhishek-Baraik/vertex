@@ -50,7 +50,7 @@ const Footer = () => {
         <h4 className='h3'>Newsletter</h4>
         <div className="divider w-1/5 border-b-2 border-b-white"></div>
         <p className='p mt-4 mb-4'>Enter your email address here to subscribe to our newsletter. We promise not to spam!</p>
-        <div className='flex gap-3'>
+        <div className='flex flex-col sm:flex-row gap-3'>
         <input type="email" className='p-2 rounded-md' placeholder='email'/>
         <CurtainButtonGray text='Subscribe'/>
         </div>

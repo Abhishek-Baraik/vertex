@@ -120,7 +120,7 @@ const Home = () => {
   });
 
   return (
-    <main className="container relative overflow-hidden">
+    <main className="home container relative overflow-hidden">
       <Slides />
       {/* boxes */}
       <section className="boxes paddings sm:relative flex sm:flex-row flex-col gap-2 justify-center mt-4">
