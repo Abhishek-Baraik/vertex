@@ -9,6 +9,10 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 200) {
@@ -45,36 +49,36 @@ const Navbar = () => {
         </a>
       </div>
       <ul className={`lg:flex gap-6 font-normal items-center ${menuOpen ? "absolute left-0 w-[100vw] h-[100vh] bg-white" : "hidden"}`}>
-        <Link to="/" className={isActive("/")}>
+        <Link to="/" onClick={scrollToTop} className={isActive("/")}>
           <li className="navlinks cursor-pointer">Home</li>
         </Link>
-        <Link to="/team" className={isActive("/team")}>
+        <Link to="/team" onClick={scrollToTop} className={isActive("/team")}>
           <li className="navlinks cursor-pointer">Team</li>
         </Link>
-        <Link to="/about" className={isActive("/about")}>
+        <Link to="/about" onClick={scrollToTop} className={isActive("/about")}>
           <li className="navlinks cursor-pointer">About</li>
         </Link>
-        <Link to="/employers" className={isActive("/employers")}>
+        <Link to="/employers" onClick={scrollToTop} className={isActive("/employers")}>
           <li className="navlinks cursor-pointer">Employers</li>
         </Link>
-        <Link to="/candidates" className={isActive("/candidates")}>
+        <Link to="/candidates" onClick={scrollToTop} className={isActive("/candidates")}>
           <li className="navlinks cursor-pointer">Candidates</li>
         </Link>
-        <Link to="/services" className={isActive("/services")}>
+        <Link to="/services" onClick={scrollToTop} className={isActive("/services")}>
           <li className="navlinks cursor-pointer">Services</li>
         </Link>
-        <Link to="/faqs" className={isActive("/faqs")}>
+        <Link to="/faqs" onClick={scrollToTop} className={isActive("/faqs")}>
           <li className="navlinks cursor-pointer">FAQS</li>
         </Link>
-        <Link to="/blog" className={isActive("/blog")}>
+        <Link to="/blog" onClick={scrollToTop} className={isActive("/blog")}>
           <li className="navlinks cursor-pointer">Blog</li>
         </Link>
-        <Link to="/contact" className={isActive("/contact")}>
+        <Link to="/contact" onClick={scrollToTop} className={isActive("/contact")}>
           <li className="navlinks cursor-pointer">Contact</li>
         </Link>
       </ul>
       <div className="hidden lg:flex items-center ml-4">
-        <Link to={"/contact"}>
+        <Link onClick={scrollToTop} to={"/contact"}>
         <Button text="Get Started" backgroundColor="#1A76D1" textColor="white" />
         </Link>
       </div>

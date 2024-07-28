@@ -115,6 +115,10 @@ const Home = () => {
     },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }; 
+  
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
@@ -152,7 +156,7 @@ const Home = () => {
                   {" "}
                   <Button text="Get Started" textColor="white" />
                 </a>
-                <Link to={"/contact"}>
+                <Link onClick={scrollToTop} to={"/contact"}>
                   {" "}
                   <CurtainButtonGray text={"Contact"} />{" "}
                 </Link>
@@ -179,7 +183,7 @@ const Home = () => {
                   {" "}
                   <Button text="Get Started" textColor="white" />
                 </a>
-                <Link to={"/contact"}>
+                <Link onClick={scrollToTop} to={"/contact"}>
                   {" "}
                   <CurtainButtonGray text={"Contact"} />{" "}
                 </Link>
@@ -205,7 +209,7 @@ const Home = () => {
                   {" "}
                   <Button text="Get Started" textColor="white" />
                 </a>
-                <Link to={"/contact"}>
+                <Link onClick={scrollToTop} to={"/contact"}>
                   {" "}
                   <CurtainButtonGray text={"Contact"} />{" "}
                 </Link>
@@ -227,7 +231,7 @@ const Home = () => {
           >
             <h4 className="h3 text-white font-semibold">{det.heading}</h4>
             <p className="p text-white">{det.para}</p>
-            <Link to={"/services"}>
+            <Link onClick={scrollToTop} to={"/services"}>
               <button className="text-start text-white flex items-center gap-2 font-semibold hover:text-secondary">
                 learn more <FaGreaterThan />
               </button>
@@ -484,7 +488,7 @@ const Home = () => {
         <div className="border-b-2 border-primary w-1/4 m-auto"></div>
         <div className="lg:flex-row flex flex-col gap-5 justify-center  sm:gap-10 mt-10">
           {blogs.map((blog, index) => (
-            <Link to={blog.link}>
+            <Link onClick={scrollToTop} to={blog.link}>
               <div
                 key={index}
                 className="shadow-2xl lg:w-[350px] lg:h-[690px] rounded-lg hover:border-primary border-2 duration-200 ease-in"

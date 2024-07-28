@@ -4,6 +4,11 @@ import CurtainButtonGray from './CurtainButtonGray'
 import './Footer.css'
 
 const Footer = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }; 
+
   return (
     <footer>
     <section className='bg-primary py-10 lg:px-[9rem] px-[1.5rem] flex flex-col sm:flex-row gap-10'>
@@ -17,31 +22,31 @@ const Footer = () => {
         <h4 className='h3 text-white'>Quick Links</h4>
         <div className="divider w-1/5 border-b-2 border-b-white"></div>
         <ul className={`sm:grid sm:grid-cols-2 mt-4 gap-6 font-normal items-center text-white`}>
-        <Link to="/" >
+        <Link onClick={scrollToTop} to="/" >
           <li className="footlinks cursor-pointer">Home</li>
         </Link>
-        <Link to="/team" >
+        <Link onClick={scrollToTop} to="/team" >
           <li className="footlinks cursor-pointer">Team</li>
         </Link>
-        <Link to="/about" >
+        <Link onClick={scrollToTop} to="/about" >
           <li className="footlinks cursor-pointer">About</li>
         </Link>
-        <Link to="/employers" >
+        <Link onClick={scrollToTop} to="/employers" >
           <li className="footlinks cursor-pointer">Employers</li>
         </Link>
-        <Link to="/candidates" >
+        <Link onClick={scrollToTop} to="/candidates" >
           <li className="footlinks cursor-pointer">Candidates</li>
         </Link>
-        <Link to="/services" >
+        <Link onClick={scrollToTop} to="/services" >
           <li className="footlinks cursor-pointer">Services</li>
         </Link>
-        <Link to="/faqs" >
+        <Link onClick={scrollToTop} to="/faqs" >
           <li className="footlinks cursor-pointer">FAQS</li>
         </Link>
-        <Link to="/blog" >
+        <Link onClick={scrollToTop} to="/blog" >
           <li className="footlinks cursor-pointer">Blog</li>
         </Link>
-        <Link to="/contact">
+        <Link onClick={scrollToTop} to="/contact">
           <li className="footlinks cursor-pointer">Contact</li>
         </Link>
       </ul>
