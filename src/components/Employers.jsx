@@ -70,7 +70,7 @@ const Employers = () => {
   return (
     <section>
       <div className="flex-col flex lg:flex-row paddings">
-        <div className="lg:w-1/2 flex flex-col justify-center">
+        <div className="lg:w-1/2 flex flex-col justify-center lg:h-[80vh]">
           <span className="sm:text-[48px] text-[24px] opacity-80  font-semibold italic">
             Vertex <span className="text-primary"> Executive</span> Recruiting
             Employer Solutions
@@ -82,14 +82,14 @@ const Employers = () => {
             team equipped to navigate complexities and seize opportunities.
           </p>
         </div>
-        <div className="lg:w-1/2">
-          <img src="hr.jpg" alt="" />
+        <div className="lg:w-1/2 flex items-center px-16">
+          <img src="4180157.jpg" alt="" />
         </div>
       </div>
 
-      <div className="flex-col mt-10 flex lg:flex-row paddings">
-        <div className="lg:w-1/2 order-2 lg:order-1">
-          <img src="hr.jpg" alt="" />
+      <div className="flex-col mt-10 gap-5 flex lg:flex-row paddings">
+        <div className="lg:w-1/2 md:px-16 flex items-center order-2  lg:order-1">
+          <img src="employer-2.jpg" className="rounded-md border-4 border-quadery" alt="" />
         </div>
         <div className="lg:w-1/2 order-1 lg:order-2 flex flex-col gap-3 justify-center">
           <span className="sm:text-[48px] opacity-80 text-[24px]  font-semibold">

@@ -116,9 +116,9 @@ const Home = () => {
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }; 
-  
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
@@ -127,7 +127,7 @@ const Home = () => {
   return (
     <main className="home relative">
       <Swiper
-        className="relative"
+        className="relative hidden md:block"
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={0}
         slidesPerView={1}
@@ -136,9 +136,6 @@ const Home = () => {
           nextEl: ".custom-swiper-button-next",
           prevEl: ".custom-swiper-button-prev",
         }}
-        // pagination={{ clickable: true }}
-        // scrollbar={{draggable:true}}
-        // autoplay={{ delay: 5000, disableOnInteraction: false }} // Add autoplay s90tings
       >
         <SwiperSlide key={1} className="">
           <div className="slide-content">
@@ -223,41 +220,44 @@ const Home = () => {
       </Swiper>
 
       {/* boxes */}
-      <section className="boxes paddings sm:relative flex sm:flex-row flex-col gap-2 justify-center mt-4">
-        {box.map((det, index) => (
-          <div
-            className="box hover:shadow-2xl bg-tertiary hover:-translate-y-6 ease-in duration-200 rounded-lg p-3 sm:p-6 sm:-top-36 sm:relative z-[2] flex flex-col gap-4 sm:w-1/3"
-            key={index}
-          >
-            <h4 className="h3 text-white font-semibold">{det.heading}</h4>
-            <p className="p text-white">{det.para}</p>
-            <Link onClick={scrollToTop} to={"/services"}>
-              <button className="text-start text-white flex items-center gap-2 font-semibold hover:text-secondary">
-                learn more <FaGreaterThan />
-              </button>
-            </Link>
-          </div>
-        ))}
-      </section>
+      <div className="flex flex-col-reverse md:flex-col">
+        <section className="boxes paddings sm:relative flex sm:flex-row flex-col gap-2 justify-center mt-4">
+          {box.map((det, index) => (
+            <div
+              className="box hover:shadow-2xl relative bg-tertiary hover:-translate-y-6 ease-in duration-200 rounded-lg p-3 lg:p-6 lg:-top-36 sm:relative z-[2] flex flex-col gap-4 sm:w-1/3"
+              key={index}
+            >
+              <h4 className="h3 text-white font-semibold">{det.heading}</h4>
+              <p className="p text-white mb-4">{det.para}</p>
+              <Link onClick={scrollToTop} to={"/services"}>
+                <button className="text-start absolute bottom-3 text-white flex items-center gap-2 font-semibold hover:text-secondary">
+                  learn more <FaGreaterThan />
+                </button>
+              </Link>
+            </div>
+          ))}
+        </section>
 
-      {/* vertex executive */}
-      <section className="paddings lg:flex mt-5">
-        <div className="flex flex-col gap-10 items-center justify-center">
-          <p className="h5 opacity-80 text-center">
-            <span className="lg:text-[48px] text-[24px]  font-semibold italic">
-              Vertex <span className="text-primary"> Executive</span> Recruiting
-            </span>{" "}
-            excels in connecting outstanding talent with premier organizations
-            through our dedicated headhunting and retained executive search
-            services. With a proven history of excellence, we have established
-            ourselves as a trusted partner for companies seeking visionary
-            leaders and executives who drive success.
-          </p>
-        </div>
-        <div>
-          <img src="hr.jpg" alt="" />
-        </div>
-      </section>
+        {/* vertex executive */}
+        <section className="paddings lg:flex mt-5">
+          <div className="flex flex-col gap-10 items-center justify-center">
+            <p className="h5 opacity-80 text-center">
+              <span className="lg:text-[48px] text-[24px]  font-semibold italic">
+                Vertex <span className="text-primary"> Executive</span>{" "}
+                Recruiting
+              </span>{" "}
+              excels in connecting outstanding talent with premier organizations
+              through our dedicated headhunting and retained executive search
+              services. With a proven history of excellence, we have established
+              ourselves as a trusted partner for companies seeking visionary
+              leaders and executives who drive success.
+            </p>
+          </div>
+          <div>
+            <img src="hr.jpg" alt="" />
+          </div>
+        </section>
+      </div>
 
       {/* vcountups  */}
       <section className="sm:flex-row flex flex-col gap-6 sm:gap-0 items-center paddings sm:justify-between mb-10 mt-5">

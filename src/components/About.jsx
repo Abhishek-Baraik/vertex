@@ -24,7 +24,7 @@ const About = () => {
   });
   return (
     <section>
-      <div className="paddings lg:flex mt-5 justify-evenly">
+      <div className="paddings lg:flex mt-5 gap-5 justify-evenly">
         <div className="lg:w-1/2">
           <p className="h5 opacity-80 text-center">
             <span className="sm:text-[48px] text-[24px]  font-semibold italic">
@@ -33,8 +33,8 @@ const About = () => {
             we are driven by a passion for excellence in executive search and recruitment. Committed to integrity, innovation, and building lasting partnerships, we have established ourselves as a trusted ally for both organizations seeking top-tier talent and accomplished executives exploring new opportunities. Based in the U.S., our global reach connects exceptional candidates with leading organizations across various industries.
           </p>
         </div>
-        <div className="lg:w-1/2">
-          <img src="hr.jpg" alt="" />
+        <div className="lg:w-1/2 flex items-center">
+          <img src="4565.jpg" alt="" />
         </div>
       </div>
 

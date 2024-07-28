@@ -62,7 +62,7 @@ const Candidates = () => {
   ];
   return (
     <section>
-      <div className="flex-col flex lg:flex-row paddings">
+      <div className="flex-col flex lg:flex-row paddings lg:h-[80vh]">
         <div className="lg:w-1/2 flex flex-col justify-center">
           <span className="sm:text-[48px] text-[24px] opacity-80  font-semibold italic">
             Vertex <span className="text-primary"> Executive</span> Recruiting
@@ -72,14 +72,14 @@ const Candidates = () => {
           Designed exclusively for accomplished professionals seeking new opportunities that align with their expertise and ambitions, our dedicated service connects you with top-tier executive positions across industries. We provide you with the chance to make a significant impact on leading organizations.
           </p>
         </div>
-        <div className="lg:w-1/2">
-          <img src="hr.jpg" alt="" />
+        <div className="lg:w-1/2 flex items-center">
+          <img src="2992867.jpg" alt="" />
         </div>
       </div>
 
-      <div className="flex-col mt-10 flex lg:flex-row paddings">
-        <div className="lg:w-1/2 order-2 lg:order-1">
-          <img src="hr.jpg" alt="" />
+      <div className="flex-col mt-10 flex lg:flex-row gap-5 paddings">
+        <div className="lg:w-1/2 order-2 md:px-16 flex items-center lg:order-1">
+          <img src="canfdidate.jpg" className='rounded-md border-4 border-quadery' alt="" />
         </div>
         <div className="lg:w-1/2 order-1 lg:order-2 flex flex-col gap-3 justify-center">
           <span className="sm:text-[48px] opacity-80 text-[24px]  font-semibold">
