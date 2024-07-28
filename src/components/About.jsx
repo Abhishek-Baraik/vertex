@@ -24,7 +24,7 @@ const About = () => {
   });
   return (
     <section>
-      <div className="paddings sm:flex mt-5 justify-evenly">
+      <div className="paddings lg:flex mt-5 justify-evenly">
         <div className="lg:w-1/2">
           <p className="h5 opacity-80 text-center">
             <span className="sm:text-[48px] text-[24px]  font-semibold italic">
@@ -51,9 +51,9 @@ const About = () => {
                   start={600}
                   end={638}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Companies we helped</p>
@@ -70,9 +70,9 @@ const About = () => {
                   start={1}
                   end={12}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Corporate Programs</p>
@@ -89,9 +89,9 @@ const About = () => {
                   start={5}
                   end={28}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Training Courses</p>
@@ -108,9 +108,9 @@ const About = () => {
                   start={50}
                   end={125}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Strategic Partners</p>
@@ -121,7 +121,7 @@ const About = () => {
 
 
       <div className="sm:mt-20 paddings bg-quadery">
-        <div className="grid grid-cols-1 pb-10 sm:grid-cols-3 gap-10 sm:mt-20 mt-10 mx-auto">
+        <div className="grid grid-cols-1 pb-10 lg:px-0 md:px-[9rem] lg:grid-cols-3 gap-10 sm:mt-20 mt-10 mx-auto">
           <div className="executive relative hover:shadow-2xl bg-tertiary border-[1px] border-primary hover:bg-white hover:text-secondary ease-in duration-200 rounded-lg py-8 px-4 flex flex-col gap-4">
             <div className="p-4 sm:p-6 bg-primary text-white absolute rounded-full -top-6 left-[40%] sm:left-[42%]">
               <FaBook />

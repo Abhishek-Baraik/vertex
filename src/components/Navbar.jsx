@@ -41,10 +41,10 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <a href="https://www.vertexexecutiverecruiting.com/">
-          <img src="logo.png" className="w-[150px] sm:w-[300px]" alt="" />
+          <img src="logo.png" className="w-[150px] w-[300px]" alt="" />
         </a>
       </div>
-      <ul className={`sm:flex gap-6 font-normal items-center ${menuOpen ? "absolute left-0 w-[100vh] bg-white" : "hidden"}`}>
+      <ul className={`lg:flex gap-6 font-normal items-center ${menuOpen ? "absolute left-0 w-[100vw] h-[100vh] bg-white" : "hidden"}`}>
         <Link to="/" className={isActive("/")}>
           <li className="navlinks cursor-pointer">Home</li>
         </Link>
@@ -73,12 +73,12 @@ const Navbar = () => {
           <li className="navlinks cursor-pointer">Contact</li>
         </Link>
       </ul>
-      <div className="hidden sm:flex items-center ml-4">
+      <div className="hidden lg:flex items-center ml-4">
         <Link to={"/contact"}>
         <Button text="Get Started" backgroundColor="#1A76D1" textColor="white" />
         </Link>
       </div>
-      <div className="flex items-center sm:hidden">
+      <div className="flex items-center lg:hidden">
         <HamburgerIcon onClick={toggleMenu} />
       </div>
     </header>

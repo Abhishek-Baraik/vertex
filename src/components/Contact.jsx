@@ -51,8 +51,8 @@ const Contact = () => {
           </div>
 
           <textarea name="Message"
-          cols={4}
           rows={10}
+          placeholder='Message...'
           className="p-3 border-[1px] border-zinc-200 rounded-md"
           id=""></textarea>
         </form>

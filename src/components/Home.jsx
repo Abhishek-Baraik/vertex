@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import Slides from "./Slides";
 import "./Home.css";
-import { FaBlackTie, FaUser } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
-import { FaBuilding } from "react-icons/fa";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { FaGraduationCap } from "react-icons/fa";
 import { FaBook } from "react-icons/fa";
@@ -17,7 +13,6 @@ import CountUp from "react-countup";
 import { FaRocket } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import FaqSection from "./FaqSection";
-
 import {
   Navigation,
   Pagination,
@@ -28,6 +23,9 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
+import Button from "./Button";
+import CurtainButtonGray from "./CurtainButtonGray";
+import { FaUser } from "react-icons/fa6";
 
 const Home = () => {
   const box = [
@@ -53,17 +51,20 @@ const Home = () => {
       img: "b2.jpg",
       title: "Job-Search Tips to Overcome Age Discrimination",
       para: "Age discrimination is a concern that many job seekers, especially those over 50, may encounter during their job search journey. However, with the right strategies and mindset, you can navigate this challenge effectively and secure the job opportunities you deserve. In this article, we'll explore actionable tips to help you overcome age discrimination in your job search.",
+      link: "/blog2",
     },
     {
       img: "b7.jpg",
       title:
         "Why It Takes Time to Land an Executive-Level Job: Unraveling the Complexity",
       para: "Securing an executive-level job is often the culmination of years of hard work, dedication, and a proven track record of leadership. However, the path to landing such a role can be long and arduous. In this blog, we'll delve into the multifaceted world of executive-level job searches, exploring why it takes time to find the perfect opportunity.",
+      link: "/blog6",
     },
     {
       img: "b9.jpg",
       title: "Headhunters vs. Recruiters: What Sets Them Apart?",
       para: "In the world of talent acquisition and job placement, two terms often emerge: 'headhunters' and 'recruiters.'' While both play critical roles in connecting job seekers with employers, they operate with distinct approaches, goals, and methodologies. Understanding the differences between headhunters and recruiters can empower job seekers and organizations alike to make informed decisions in their pursuit of talent or career advancement.",
+      link: "/blog8",
     },
   ];
 
@@ -120,8 +121,103 @@ const Home = () => {
   });
 
   return (
-    <main className="home container relative overflow-hidden">
-      <Slides />
+    <main className="home relative">
+      <Swiper
+        className="relative"
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={0}
+        slidesPerView={1}
+        loop={true}
+        navigation={{
+          nextEl: ".custom-swiper-button-next",
+          prevEl: ".custom-swiper-button-prev",
+        }}
+        // pagination={{ clickable: true }}
+        // scrollbar={{draggable:true}}
+        // autoplay={{ delay: 5000, disableOnInteraction: false }} // Add autoplay s90tings
+      >
+        <SwiperSlide key={1} className="">
+          <div className="slide-content ">
+            <img src="slide01.jpg" alt="" className="slide-image w-full" />
+            <div className="slide-text text-center paddings absolute flex flex-col gap-2">
+              <h1 className="h1 font-semibold">
+                Vertex <span className="text-primary">Executive</span>{" "}
+                Recruiting
+              </h1>
+              <p className="h4">
+                CONNECTING ELITE TALENT WITH GLOBAL ENTERPRISES
+              </p>
+              <div className="flex flex-column justify-center mb-2 gap-4 text-center">
+                <a href="#applicant-form">
+                  {" "}
+                  <Button text="Get Started" textColor="white" />
+                </a>
+                <Link to={"/contact"}>
+                  {" "}
+                  <CurtainButtonGray text={"Contact"} />{" "}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide key={2} className="">
+          <div className="slide-content ">
+            <img
+              src="slide01.jpg"
+              alt=""
+              className="slide-image w-full object-contain"
+            />
+            <div className="slide-text text-center paddings absolute flex flex-col gap-3">
+              <h1 className="h1 font-semibold">
+                Elevate Your <span className="text-primary">Team</span>{" "}
+                Recruiting
+              </h1>
+              <p className="h4 sm:mb-5 ">FIND YOUR NEXT LEADER</p>
+              <div className="flex flex-column justify-center gap-4 text-center">
+                <a href="#applicant-form">
+                  {" "}
+                  <Button text="Get Started" textColor="white" />
+                </a>
+                <Link to={"/contact"}>
+                  {" "}
+                  <CurtainButtonGray text={"Contact"} />{" "}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide key={3} className="">
+          <div className="slide-content ">
+            <img
+              src="slide01.jpg"
+              alt=""
+              className="slide-image w-full object-contain"
+            />
+            <div className="slide-text text-center paddings absolute flex flex-col gap-3">
+              <h1 className="h1 font-semibold">
+                <span className="text-primary">Stuck</span> in a ‘career rut’?
+              </h1>
+              <p className="h4 sm:mb-5 ">UNLOCK NEW CAREER HORIZONS</p>
+              <div className="flex flex-column justify-center gap-4 text-center ">
+                <a href="#applicant-form">
+                  {" "}
+                  <Button text="Get Started" textColor="white" />
+                </a>
+                <Link to={"/contact"}>
+                  {" "}
+                  <CurtainButtonGray text={"Contact"} />{" "}
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <div className="custom-swiper-button-prev duration-200 ease-in swiper-button-prev bg-blue-700 text-white scale-[0.3] sm:scale-[0.5] p-10 sm:p-12 rounded-full hover:bg-secondary absolute -left-6 top-20 sm:left-0 sm:top-[50%]"></div>
+        <div className="custom-swiper-button-next swiper-button-next duration-200 ease-in swiper-button-prev bg-blue-700 text-white scale-[0.3] sm:scale-[0.5] p-10 sm:p-12 rounded-full hover:bg-secondary absolute -right-6 top-20 sm:right-0 sm:top-[50%]"></div>
+      </Swiper>
+
       {/* boxes */}
       <section className="boxes paddings sm:relative flex sm:flex-row flex-col gap-2 justify-center mt-4">
         {box.map((det, index) => (
@@ -141,10 +237,10 @@ const Home = () => {
       </section>
 
       {/* vertex executive */}
-      <section className="paddings sm:flex mt-5">
+      <section className="paddings lg:flex mt-5">
         <div className="flex flex-col gap-10 items-center justify-center">
           <p className="h5 opacity-80 text-center">
-            <span className="sm:text-[48px] text-[24px]  font-semibold italic">
+            <span className="lg:text-[48px] text-[24px]  font-semibold italic">
               Vertex <span className="text-primary"> Executive</span> Recruiting
             </span>{" "}
             excels in connecting outstanding talent with premier organizations
@@ -172,9 +268,9 @@ const Home = () => {
                   start={600}
                   end={638}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Companies we helped</p>
@@ -191,9 +287,9 @@ const Home = () => {
                   start={1}
                   end={12}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Corporate Programs</p>
@@ -210,9 +306,9 @@ const Home = () => {
                   start={5}
                   end={28}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Training Courses</p>
@@ -229,9 +325,9 @@ const Home = () => {
                   start={50}
                   end={125}
                   duration={5}
-                  className="countup md:text-4xl"
+                  className="countup text-xl lg:text-4xl"
                 />
-                <span className="text-primary sm:text-3xl"> +</span>
+                <span className="text-primary text-xl lg:text-3xl"> +</span>
               </span>
             )}
             <p className="p font-medium">Strategic Partners</p>
@@ -244,7 +340,7 @@ const Home = () => {
           WHY CHOOSE US FOR EXECUTIVE SEARCH
         </h1>
         <div className="border-b-2 border-primary w-1/2 m-auto"></div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:mt-20 mt-10 sm:w-[60%] m-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:mt-20 mt-10 sm:w-[60%] m-auto">
           <div className="executive relative hover:shadow-2xl bg-tertiary border-[1px] border-primary hover:bg-white hover:text-secondary ease-in duration-200 rounded-lg py-8 px-4 flex flex-col gap-4">
             <div className="p-4 sm:p-6 bg-primary text-white absolute rounded-full -top-6 left-[40%] sm:left-[42%]">
               <FaBook />
@@ -386,28 +482,33 @@ const Home = () => {
           BLOG POSTS
         </h2>
         <div className="border-b-2 border-primary w-1/4 m-auto"></div>
-        <div className="sm:flex-row flex flex-col gap-5  sm:gap-10 mt-10">
-          {blogs.map((blog) => (
-            <div className="shadow-2xl rounded-lg sm:w-1/3 hover:border-primary border-2 duration-200 ease-in">
-              <div className="rounded-lg overflow-hidden">
-                <img src={blog.img} className="object-contain" alt="" />
+        <div className="lg:flex-row flex flex-col gap-5 justify-center  sm:gap-10 mt-10">
+          {blogs.map((blog, index) => (
+            <Link to={blog.link}>
+              <div
+                key={index}
+                className="shadow-2xl lg:w-[350px] lg:h-[690px] rounded-lg hover:border-primary border-2 duration-200 ease-in"
+              >
+                <div className="rounded-lg overflow-hidden">
+                  <img src={blog.img} className="object-contain" alt="" />
+                </div>
+                <div className="p-3 flex flex-col gap-4 mt-4">
+                  <h4 className="text-[20px] opacity-80 font-bold hover:text-primary cursor-pointer">
+                    {blog.title}
+                  </h4>
+                  <p className="p opacity-80">{blog.para}</p>
+                </div>
               </div>
-              <div className="p-3 flex flex-col gap-4 mt-4">
-                <h4 className="text-[20px] opacity-80 font-bold ">
-                  {blog.title}
-                </h4>
-                <p className="p opacity-80">{blog.para}</p>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
 
       {/* faqs section */}
       <FaqSection faqs={faqs} heading={"Why Choose Us For Candidates"} />
-
+      <div id="contact-form"></div>
       {/* form section */}
-      <section className="paddings mb-10">
+      <section className="paddings mb-10" id="contact-form">
         <h1 className="h2 text-secondary font-semibold text-center">
           APPLICANT FORM
         </h1>
@@ -479,7 +580,7 @@ const Home = () => {
               </select>
             </div>
           </div>
-          <div className="flex gap-4 p-6">
+          <div className="flex gap-4 lg:p-6">
             <input
               type="checkbox"
               name="confirmation"
@@ -500,14 +601,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="sm:px-[9rem] py-10 bg-[#EDF2FF] flex flex-col sm:flex-row gap-3 justify-between">
+      <section className="lg:px-[9rem] px-[1.5rem] py-10 bg-[#EDF2FF] flex flex-col sm:flex-row gap-3 justify-between">
         <div className="text-center">
           <h4 className="h4 opacity-75 font-semibold">FOR JOB SEEKERS</h4>
           <p className="p text-primary">jobs@vertexexecutiverecruiting.com</p>
         </div>
         <div className="text-center">
           <h4 className="h4 opacity-75 font-semibold">FOR EMPLOYERS</h4>
-          <p className="p text-primary">staffing@vertexexecutiverecruiting.com</p>
+          <p className="p text-primary">
+            staffing@vertexexecutiverecruiting.com
+          </p>
         </div>
         <div className="text-center">
           <h4 className="h4 font-semibold opacity-75">OPEN HOURS</h4>

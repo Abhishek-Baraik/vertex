@@ -8,6 +8,10 @@
   --tertiary: #1A76D1;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   padding: 0;
   margin: 0;

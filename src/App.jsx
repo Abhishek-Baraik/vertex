@@ -17,6 +17,16 @@ import Services3 from './components/services/Services3'
 import Services4 from './components/services/Services4'
 import Services5 from './components/services/Services5'
 import Services6 from './components/services/Services6'
+import Blog1 from './components/blogs/Blog1'
+import Blog2 from './components/blogs/Blog2'
+import Blog3 from './components/blogs/Blog3'
+import Blog4 from './components/blogs/Blog4'
+import Blog5 from './components/blogs/Blog5'
+import Blog6 from './components/blogs/Blog6'
+import Blog7 from './components/blogs/Blog7'
+import Blog8 from './components/blogs/Blog8'
+import Blog9 from './components/blogs/Blog9'
+import Blog10 from './components/blogs/Blog10'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -41,6 +51,16 @@ function App() {
       <Route path='/service4' element={<Services4/>}/>
       <Route path='/service5' element={<Services5/>}/>
       <Route path='/service6' element={<Services6/>}/>
+      <Route path='/blog1' element={<Blog1/>}/>
+      <Route path='/blog2' element={<Blog2/>}/>
+      <Route path='/blog3' element={<Blog3/>}/>
+      <Route path='/blog4' element={<Blog4/>}/>
+      <Route path='/blog5' element={<Blog5/>}/>
+      <Route path='/blog6' element={<Blog6/>}/>
+      <Route path='/blog7' element={<Blog7/>}/>
+      <Route path='/blog8' element={<Blog8/>}/>
+      <Route path='/blog9' element={<Blog9/>}/>
+      <Route path='/blog10' element={<Blog10/>}/>
       </Routes>
       <Footer/>
       </BrowserRouter>

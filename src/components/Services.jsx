@@ -44,10 +44,10 @@ const Services = () => {
     <section className="paddings mt-10">
       <h2 className="h2 text-secondary font-semibold text-center">SERVICES</h2>
       <div className="border-b-2 border-primary w-1/4 m-auto"></div>
-      <div className="sm:grid sm:grid-cols-3 flex flex-col gap-5  sm:gap-10 mt-10">
+      <div className="sm:grid lg:grid-cols-3 flex flex-col gap-5  sm:gap-10 mt-10">
         {blogs.map((blog) => (
           <Link to={blog.link}>
-            <div className="shadow-2xl rounded-lg hover:border-primary border-2 duration-200 ease-in">
+            <div className="shadow-2xl rounded-lg lg:h-[720px] hover:border-primary border-2 duration-200 ease-in">
               <div className="rounded-lg overflow-hidden">
                 <img src={blog.img} className="object-contain" alt="" />
               </div>

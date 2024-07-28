@@ -62,7 +62,7 @@ const Candidates = () => {
   ];
   return (
     <section>
-      <div className="flex-col flex sm:flex-row paddings">
+      <div className="flex-col flex lg:flex-row paddings">
         <div className="lg:w-1/2 flex flex-col justify-center">
           <span className="sm:text-[48px] text-[24px] opacity-80  font-semibold italic">
             Vertex <span className="text-primary"> Executive</span> Recruiting
@@ -77,7 +77,7 @@ const Candidates = () => {
         </div>
       </div>
 
-      <div className="flex-col mt-10 flex sm:flex-row paddings">
+      <div className="flex-col mt-10 flex lg:flex-row paddings">
         <div className="lg:w-1/2 order-2 lg:order-1">
           <img src="hr.jpg" alt="" />
         </div>
@@ -100,7 +100,7 @@ const Candidates = () => {
       </div>
 
       <div className="sm:mt-20 paddings bg-quadery">
-        <div className="grid grid-cols-1 pb-10 sm:grid-cols-3 gap-10 sm:mt-20 mt-10 mx-auto">
+        <div className="grid grid-cols-1 pb-10 md:px-[9rem] lg:px-0 lg:grid-cols-3 gap-10 sm:mt-20 mt-10 mx-auto">
           <div className="executive relative hover:shadow-2xl bg-tertiary border-[1px] border-primary hover:bg-white hover:text-secondary ease-in duration-200 rounded-lg py-8 px-4 flex flex-col gap-4">
             <div className="p-4 sm:p-6 bg-primary text-white absolute rounded-full -top-6 left-[40%] sm:left-[42%]">
             <MdAttachMoney />
@@ -243,7 +243,7 @@ const Candidates = () => {
               </select>
             </div>
           </div>
-          <div className="flex gap-4 p-6">
+          <div className="flex gap-4">
             <input
               type="checkbox"
               name="confirmation"
