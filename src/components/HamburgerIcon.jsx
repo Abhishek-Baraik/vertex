@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./HamburgerIcon.css";
 
-const HamburgerIcon = ({ onClick }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-    onClick();
-  };
-
+const HamburgerIcon = ({ onClick, isOpen }) => {
   return (
-    <div className={`hamburger-icon ${isOpen ? "open" : ""}`} onClick={handleClick}>
+    <div className={`hamburger-icon ${isOpen ? "open" : ""}`} onClick={onClick}>
       <div className="line line1"></div>
       <div className="line line2"></div>
       <div className="line line3"></div>
