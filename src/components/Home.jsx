@@ -141,9 +141,9 @@ const Home = () => {
         // autoplay={{ delay: 5000, disableOnInteraction: false }} // Add autoplay s90tings
       >
         <SwiperSlide key={1} className="">
-          <div className="slide-content ">
+          <div className="slide-content">
             <img src="slide01.jpg" alt="" className="slide-image w-full" />
-            <div className="slide-text text-center paddings absolute flex flex-col gap-2">
+            <div className="slide-text text-center absolute flex flex-col gap-2">
               <h1 className="h1 font-semibold">
                 Vertex <span className="text-primary">Executive</span>{" "}
                 Recruiting
