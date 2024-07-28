@@ -41,7 +41,7 @@ const Navbar = () => {
     >
       <div className="flex items-center">
         <a href="https://www.vertexexecutiverecruiting.com/">
-          <img src="logo.png" className="w-[150px] w-[300px]" alt="" />
+          <img src="logo.png" className="w-[150px] md:w-[300px]" alt="" />
         </a>
       </div>
       <ul className={`lg:flex gap-6 font-normal items-center ${menuOpen ? "absolute left-0 w-[100vw] h-[100vh] bg-white" : "hidden"}`}>

@@ -6,7 +6,6 @@ const Contact = () => {
         <h1 className="h2 text-secondary font-semibold text-center">
           CONTACT US
         </h1>
-
         <form
           action=""
           className="sm:w-1/2 mx-auto flex flex-col gap-5 py-6 sm:px-12"
